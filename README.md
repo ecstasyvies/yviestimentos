@@ -56,48 +56,7 @@ O Yviestimentos é uma ferramenta web especializada em análise de investimentos
 - Sistema de build automatizado
 - Testes automatizados abrangentes
 
-## Começando
-
-### Pré-requisitos
-- Navegador web moderno (Chrome, Firefox, Safari ou Edge)
-- Servidor web local (opcional para desenvolvimento)
-
-### Instalação para Desenvolvimento
-
-1. Clone o repositório
-```bash
-git clone https://github.com/ecstasyvies/yviestimentos.git
-```
-
-2. Acesse o diretório
-```bash
-cd yviestimentos
-```
-
-3. Inicie um servidor local
-```bash
-# Usando Python 3
-python -m http.server 8000
-```
-
-### Guia de Uso
-
-#### Configuração da Simulação
-1. Informe os parâmetros iniciais:
-   - Capital inicial (obrigatório)
-   - Aporte mensal (opcional)
-   - Taxa de juros
-   - Período do investimento
-
-2. Ajuste as configurações:
-   - Tipo de taxa (mensal/anual)
-   - Unidade do período (meses/anos)
-
-#### Análise dos Resultados
-- Visualize o montante final projetado
-- Acompanhe a evolução do patrimônio no gráfico
-- Explore os detalhes período a período na tabela
-- Exporte os dados para análise externa
+## Exemplos de Análise
 
 ### Exemplos de Uso
 
