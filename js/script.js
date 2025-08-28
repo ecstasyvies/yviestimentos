@@ -1,3 +1,5 @@
+'use strict';
+
 import { formatador } from './modulos/formatador.js';
 import { FormatadorMoeda } from './modulos/formatador-moeda.js';
 import { FormatadorPorcentagem } from './modulos/formatador-porcentagem.js';

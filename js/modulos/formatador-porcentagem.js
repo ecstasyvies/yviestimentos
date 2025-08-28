@@ -1,3 +1,5 @@
+'use strict';
+
 export class FormatadorPorcentagem {
   constructor(input, opcoes = {}) {
     if (!input) throw new Error('Input inválido');

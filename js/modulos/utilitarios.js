@@ -1,3 +1,5 @@
+'use strict';
+
 export const utilitarios = {
   debounce(fn, delay) {
     let timeoutId;

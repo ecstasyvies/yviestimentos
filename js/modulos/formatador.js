@@ -1,3 +1,5 @@
+'use strict';
+
 export const formatador = {
   moeda(valor, formatoCompleto = true) {
     if (typeof valor !== 'number' || isNaN(valor)) return '';

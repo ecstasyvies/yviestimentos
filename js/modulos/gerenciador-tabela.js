@@ -1,3 +1,5 @@
+'use strict';
+
 export class GerenciadorTabela {
   constructor(elementos, state) {
     this.elementos = elementos;

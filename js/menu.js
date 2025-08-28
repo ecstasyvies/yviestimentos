@@ -1,3 +1,5 @@
+'use strict';
+
 import { utilitarios } from './modulos/utilitarios.js';
 
 document.addEventListener('DOMContentLoaded', function() {

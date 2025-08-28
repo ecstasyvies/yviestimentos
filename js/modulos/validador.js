@@ -1,3 +1,5 @@
+'use strict';
+
 export const validador = {
   erros: new Map(),
   timeouts: new Map(),
@@ -8,7 +10,6 @@ export const validador = {
     }
   },
   
-  // --- Gerenciamento de erros ---
   adicionarErro(campo, mensagem) {
     this.erros.set(campo.id, mensagem);
     this.atualizarFeedback(campo);
@@ -42,11 +43,9 @@ export const validador = {
       feedbackEl.classList.remove('erro');
     }
     
-    // Redimensiona o gráfico sempre que o feedback muda
     this.redimensionarGrafico();
   },
   
-  // --- Validação de campo ---
   validarCampo(campo, validador, opcoesExtras = {}) {
     const {
       requerido = true,

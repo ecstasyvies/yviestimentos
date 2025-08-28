@@ -1,3 +1,5 @@
+'use strict';
+
 export class GerenciadorGrafico {
   constructor(canvas, tooltip) {
     this.canvas = canvas;
