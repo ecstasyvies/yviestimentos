@@ -106,16 +106,16 @@ export class GerenciadorGrafico {
           label: 'Evolução do Investimento',
           data: dados.map(item => item.montante),
           borderColor: '#ff7f7f',
-          backgroundColor: 'rgba(255, 127, 127, 0.1)',
+          backgroundColor: 'rgba(255, 127, 127, 0.15)',
           pointBackgroundColor: '#ff4c4c',
           pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#ff4c4c',
-          pointHoverBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: '#ff4c4c',
           pointRadius: isMobile ? 4 : 3,
           pointHoverRadius: isMobile ? 6 : 5,
           borderWidth: 2,
           fill: true,
-          tension: 0.1
+          tension: 0.2
         }]
       },
       options: {
@@ -143,7 +143,7 @@ export class GerenciadorGrafico {
         scales: {
           x: {
             grid: {
-              color: 'rgba(252, 252, 252, 0.2)',
+              color: 'rgba(87, 65, 65, 0.2)',
               drawBorder: false
             },
             ticks: {
