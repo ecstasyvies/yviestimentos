@@ -1,91 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yviestimentos - Calculadora de Juros Compostos</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="preload"
-      href="https://api.fontshare.com/v2/css?f[]=technor@400,700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        href="https://api.fontshare.com/v2/css?f[]=technor@400,700&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      />
-    </noscript>
-  </head>
 
-  <body>
-    <header>
-      <div class="cabecalho">
-        <h1>Yviestimentos</h1>
-        <nav class="menu-desktop">
-          <ul>
-            <li>
-              <a href="https://colorid.es/@yvies" target="_blank" rel="me"
-                >Quem fez?</a
-              >
-            </li>
-            <li class="submenu-container">
-              <button class="submenu-trigger" aria-expanded="false">
-                Contato
-                <span class="arrow">▼</span>
-              </button>
-              <ul class="submenu">
-                <li><a href="mailto:yviesflowers@proton.me">E-mail</a></li>
-                <li><a href="tel:+55XXXXXXXXXX">WhatsApp</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <button
-          id="menu-toggle"
-          class="menu-icon"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-    <aside
-      id="menu-lateral"
-      class="menu-oculto"
-      aria-hidden="true"
-      aria-label="Menu lateral"
-    >
-      <nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yviestimentos - Calculadora de Juros Compostos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=technor@400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://api.fontshare.com/v2/css?f[]=technor@400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </noscript>
+</head>
+
+<body>
+  <header>
+    <div class="cabecalho">
+      <h1>Yviestimentos</h1>
+      <nav class="menu-desktop">
         <ul>
           <li>
-            <a href="https://colorid.es/@yvies" target="_blank" rel="me"
-              >Quem fez?</a
-            >
+            <a href="https://colorid.es/@yvies" target="_blank" rel="me">Quem fez?</a>
           </li>
           <li class="submenu-container">
             <button class="submenu-trigger" aria-expanded="false">
@@ -94,232 +32,220 @@
             </button>
             <ul class="submenu">
               <li><a href="mailto:yviesflowers@proton.me">E-mail</a></li>
-              <li><a href="tel:+55XXXXXXXXXX">WhatsApp</a></li>
+              <li><a href="https://wa.me/5589999974293" target="_blank">WhatsApp</a></li>
+              <li><a href="https://t.me/dericksousa" target="_blank">Telegram</a></li>
             </ul>
           </li>
         </ul>
       </nav>
-    </aside>
-    <div id="menu-backdrop" class="menu-backdrop hidden"></div>
-    <main>
-      <section class="calculadora">
-        <h2>Cálculo de Juros Compostos</h2>
-        <form id="form-calculo">
-          <div class="campo">
-            <label for="valor-inicial">Valor Inicial (R$):</label>
-            <input
-              type="text"
-              id="valor-inicial"
-              placeholder="Por exemplo, R$ 50,00"
-              inputmode="numeric"
-              required
-            />
-          </div>
-          <div class="campo">
-            <label for="valor-mensal">Aporte Mensal (R$):</label>
-            <input
-              type="text"
-              id="valor-mensal"
-              placeholder="Aqui entra o valor mensal"
-              inputmode="numeric"
-            />
-          </div>
-          <div class="campo">
-            <label for="taxa-juros">Taxa de Juros (%):</label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="taxa-juros"
-                placeholder="5%, por exemplo"
-                inputmode="numeric"
-                required
-              />
-              <select
-                id="tipo-taxa"
-                class="periodo-select"
-                aria-label="Selecionar tipo de taxa"
-              >
-                <option value="mensal">Mensal</option>
-                <option value="anual">Anual</option>
-              </select>
-            </div>
-          </div>
-          <div class="campo">
-            <label for="periodo">Período de Investimento:</label>
-            <div class="input-group">
-              <input
-                type="number"
-                id="periodo"
-                inputmode="numeric"
-                placeholder="Digite o período"
-                min="1"
-                max="600"
-                required
-              />
-              <select
-                id="tipo-periodo"
-                class="periodo-select"
-                aria-label="Selecionar tipo de período"
-              >
-                <option value="meses">Meses</option>
-                <option value="anos">Anos</option>
-              </select>
-            </div>
-          </div>
-          <div class="botoes">
-            <button type="submit" id="botao-calcular">Calcular</button>
-            <button type="reset" id="botao-limpar">Limpar</button>
-          </div>
-        </form>
-      </section>
-      <aside id="mensagem-erro-backdrop" class="hidden"></aside>
-      <section id="mensagem-erro" class="alerta hidden">
-        <p id="mensagem-texto">Por favor, insira valores válidos.</p>
-      </section>
-      <section class="resultados hidden" aria-live="polite">
-        <h2>Resultados</h2>
-        <div id="resultado-final"></div>
-        <div class="grafico-container">
-          <canvas
-            id="grafico-investimento"
-            aria-label="Gráfico de evolução do investimento"
-            role="img"
-          ></canvas>
+      <button id="menu-toggle" class="menu-icon" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <aside id="menu-lateral" class="menu-oculto" aria-hidden="true" aria-label="Menu lateral">
+    <nav>
+      <ul>
+        <li>
+          <a href="https://colorid.es/@yvies" target="_blank" rel="me">Quem fez?</a>
+        </li>
+        <li class="submenu-container">
+          <button class="submenu-trigger" aria-expanded="false">
+            Contato
+            <span class="arrow">▼</span>
+          </button>
+          <ul class="submenu">
+            <li><a href="mailto:yviesflowers@proton.me">E-mail</a></li>
+            <li><a href="https://wa.me/5589999974293" target="_blank">WhatsApp</a></li>
+            <li><a href="https://t.me/dericksousa" target="_blank">Telegram</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div id="menu-backdrop" class="menu-backdrop hidden"></div>
+  <main>
+    <section class="calculadora">
+      <h2>Cálculo de Juros Compostos</h2>
+      <form id="form-calculo">
+        <div class="campo">
+          <label for="valor-inicial">Valor Inicial (R$):</label>
+          <input type="text" id="valor-inicial" placeholder="Por exemplo, R$ 50,00" inputmode="numeric" required />
         </div>
-        <div class="tabela-container">
-          <table id="tabela-investimento">
-            <caption class="tabela-titulo">
-              Evolução do Investimento
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Mês/Período</th>
-                <th scope="col">Juros no Período (R$)</th>
-                <th scope="col">Total Investido (R$)</th>
-                <th scope="col">Total de Juros (R$)</th>
-                <th scope="col">Montante Final (R$)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Células serão preenchidas dinamicamente com data-label -->
-            </tbody>
-          </table>
+        <div class="campo">
+          <label for="valor-mensal">Aporte Mensal (R$):</label>
+          <input type="text" id="valor-mensal" placeholder="Aqui entra o valor mensal" inputmode="numeric" />
         </div>
-        <div id="tabela-descricao" class="sr-only"></div>
-      </section>
-      <section class="informacoes">
-        <h2 class="titulo-informacoes">Tutorial de Como Usar</h2>
-        <div class="container-detalhes">
-          <details class="detalhe-item">
-            <summary class="detalhe-titulo">O que são juros compostos?</summary>
-            <div class="detalhe-conteudo">
-              <p>
-                Juros compostos são uma forma de cálculo de juros em que os
-                juros gerados em cada período são adicionados ao valor
-                principal, de modo que os juros do próximo período são
-                calculados sobre esse novo valor. Isso resulta em um crescimento
-                exponencial do investimento ao longo do tempo. A fórmula para
-                calcular juros compostos é:
-              </p>
-              <p>
-                <strong>M = P × (1 + i)<sup>n</sup></strong>
-              </p>
-              <p>Onde:</p>
-              <ul>
-                <li><strong>M</strong>: Montante final</li>
-                <li><strong>P</strong>: Valor principal (inicial)</li>
-                <li><strong>i</strong>: Taxa de juros (em decimal)</li>
-                <li><strong>n</strong>: Número de períodos</li>
-              </ul>
-              <p>
-                <strong>Exemplo:</strong> Se você investir R$ 1.000,00 a uma
-                taxa de juros de 5% ao ano, durante 3 anos, o montante final
-                será:
-              </p>
-              <p>
-                <strong>M = 1000 × (1 + 0,05)<sup>3</sup> = R$ 1.157,63</strong>
-              </p>
-            </div>
-          </details>
-          <details class="detalhe-item">
-            <summary class="detalhe-titulo">
-              Qual a diferença entre juros compostos e simples?
-            </summary>
-            <div class="detalhe-conteudo">
-              <p>
-                Nos <strong>juros simples</strong>, os juros são calculados
-                apenas sobre o valor inicial (principal) durante todo o período.
-                A fórmula para juros simples é:
-              </p>
-              <p><strong>J = P × i × n</strong></p>
-              <p>Onde:</p>
-              <ul>
-                <li><strong>J</strong>: Juros acumulados</li>
-                <li><strong>P</strong>: Valor principal (inicial)</li>
-                <li><strong>i</strong>: Taxa de juros (em decimal)</li>
-                <li><strong>n</strong>: Número de períodos</li>
-              </ul>
-              <p>
-                <strong>Exemplo:</strong> Usando o mesmo exemplo anterior, com
-                juros simples, os juros acumulados seriam:
-              </p>
-              <p><strong>J = 1000 × 0,05 × 3 = R$ 150,00</strong></p>
-              <p>
-                Portanto, o montante final seria <strong>R$ 1.150,00</strong>,
-                menor que o montante com juros compostos.
-              </p>
-            </div>
-          </details>
-          <details class="detalhe-item">
-            <summary class="detalhe-titulo">Como usar a calculadora?</summary>
-            <div class="detalhe-conteudo">
-              <p>
-                Siga os passos abaixo para calcular o crescimento do seu
-                investimento:
-              </p>
-              <ol>
-                <li>
-                  Insira o <strong>valor inicial</strong> que você deseja
-                  investir.
-                </li>
-                <li>
-                  Adicione o valor do <strong>aporte mensal</strong>, se houver.
-                </li>
-                <li>
-                  Informe a <strong>taxa de juros</strong> e selecione se ela é
-                  mensal ou anual.
-                </li>
-                <li>
-                  Defina o <strong>período de investimento</strong> em meses ou
-                  anos.
-                </li>
-                <li>
-                  Clique em <strong>Calcular</strong> para ver o resultado.
-                </li>
-              </ol>
-              <p>
-                A calculadora exibirá o montante final, a evolução do
-                investimento em uma tabela e um gráfico para visualização.
-              </p>
-            </div>
-          </details>
+        <div class="campo">
+          <label for="taxa-juros">Taxa de Juros (%):</label>
+          <div class="input-group">
+            <input type="text" id="taxa-juros" placeholder="5%, por exemplo" inputmode="numeric" required />
+            <select id="tipo-taxa" class="periodo-select" aria-label="Selecionar tipo de taxa">
+              <option value="mensal">Mensal</option>
+              <option value="anual">Anual</option>
+            </select>
+          </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>
-        &copy; 2025 Yviestimentos. Licenciado sob a
-        <a
-          href="https://opensource.org/licenses/MIT"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Licença MIT"
-          >MIT License</a
-        >.
-      </p>
-    </footer>
+        <div class="campo">
+          <label for="periodo">Período de Investimento:</label>
+          <div class="input-group">
+            <input type="number" id="periodo" inputmode="numeric" placeholder="Digite o período" min="1" max="600" required />
+            <select id="tipo-periodo" class="periodo-select" aria-label="Selecionar tipo de período">
+              <option value="meses">Meses</option>
+              <option value="anos">Anos</option>
+            </select>
+          </div>
+        </div>
+        <div class="botoes">
+          <button type="submit" id="botao-calcular">Calcular</button>
+          <button type="reset" id="botao-limpar">Limpar</button>
+        </div>
+      </form>
+    </section>
+    <aside id="mensagem-erro-backdrop" class="hidden"></aside>
+    <section id="mensagem-erro" class="alerta hidden">
+      <p id="mensagem-texto">Por favor, insira valores válidos.</p>
+    </section>
+    <section class="resultados hidden" aria-live="polite">
+      <h2>Resultados</h2>
+      <div id="resultado-final"></div>
+      <div class="grafico-container">
+        <canvas id="grafico-investimento" aria-label="Gráfico de evolução do investimento" role="img"></canvas>
+      </div>
+      <div class="tabela-container">
+        <table id="tabela-investimento">
+          <caption class="tabela-titulo">
+            Evolução do Investimento
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Mês/Período</th>
+              <th scope="col">Juros no Período (R$)</th>
+              <th scope="col">Total Investido (R$)</th>
+              <th scope="col">Total de Juros (R$)</th>
+              <th scope="col">Montante Final (R$)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Células serão preenchidas dinamicamente com data-label -->
+          </tbody>
+        </table>
+      </div>
+      <div id="tabela-descricao" class="sr-only"></div>
+    </section>
+    <section class="informacoes">
+      <h2 class="titulo-informacoes">Tutorial de Como Usar</h2>
+      <div class="container-detalhes">
+        <details class="detalhe-item">
+          <summary class="detalhe-titulo">O que são juros compostos?</summary>
+          <div class="detalhe-conteudo">
+            <p>
+              Juros compostos são uma forma de cálculo de juros em que os
+              juros gerados em cada período são adicionados ao valor
+              principal, de modo que os juros do próximo período são
+              calculados sobre esse novo valor. Isso resulta em um crescimento
+              exponencial do investimento ao longo do tempo. A fórmula para
+              calcular juros compostos é:
+            </p>
+            <p>
+              <strong>M = P × (1 + i)<sup>n</sup></strong>
+            </p>
+            <p>Onde:</p>
+            <ul>
+              <li><strong>M</strong>: Montante final</li>
+              <li><strong>P</strong>: Valor principal (inicial)</li>
+              <li><strong>i</strong>: Taxa de juros (em decimal)</li>
+              <li><strong>n</strong>: Número de períodos</li>
+            </ul>
+            <p>
+              <strong>Exemplo:</strong> Se você investir R$ 1.000,00 a uma
+              taxa de juros de 5% ao ano, durante 3 anos, o montante final
+              será:
+            </p>
+            <p>
+              <strong>M = 1000 × (1 + 0,05)<sup>3</sup> = R$ 1.157,63</strong>
+            </p>
+          </div>
+        </details>
+        <details class="detalhe-item">
+          <summary class="detalhe-titulo">
+            Qual a diferença entre juros compostos e simples?
+          </summary>
+          <div class="detalhe-conteudo">
+            <p>
+              Nos <strong>juros simples</strong>, os juros são calculados
+              apenas sobre o valor inicial (principal) durante todo o período.
+              A fórmula para juros simples é:
+            </p>
+            <p><strong>J = P × i × n</strong></p>
+            <p>Onde:</p>
+            <ul>
+              <li><strong>J</strong>: Juros acumulados</li>
+              <li><strong>P</strong>: Valor principal (inicial)</li>
+              <li><strong>i</strong>: Taxa de juros (em decimal)</li>
+              <li><strong>n</strong>: Número de períodos</li>
+            </ul>
+            <p>
+              <strong>Exemplo:</strong> Usando o mesmo exemplo anterior, com
+              juros simples, os juros acumulados seriam:
+            </p>
+            <p><strong>J = 1000 × 0,05 × 3 = R$ 150,00</strong></p>
+            <p>
+              Portanto, o montante final seria <strong>R$ 1.150,00</strong>,
+              menor que o montante com juros compostos.
+            </p>
+          </div>
+        </details>
+        <details class="detalhe-item">
+          <summary class="detalhe-titulo">Como usar a calculadora?</summary>
+          <div class="detalhe-conteudo">
+            <p>
+              Siga os passos abaixo para calcular o crescimento do seu
+              investimento:
+            </p>
+            <ol>
+              <li>
+                Insira o <strong>valor inicial</strong> que você deseja
+                investir.
+              </li>
+              <li>
+                Adicione o valor do <strong>aporte mensal</strong>, se houver.
+              </li>
+              <li>
+                Informe a <strong>taxa de juros</strong> e selecione se ela é
+                mensal ou anual.
+              </li>
+              <li>
+                Defina o <strong>período de investimento</strong> em meses ou
+                anos.
+              </li>
+              <li>
+                Clique em <strong>Calcular</strong> para ver o resultado.
+              </li>
+            </ol>
+            <p>
+              A calculadora exibirá o montante final, a evolução do
+              investimento em uma tabela e um gráfico para visualização.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>
+      &copy; 2025 Yviestimentos. Licenciado sob a
+      <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer" aria-label="Licença MIT">MIT License</a>.
+    </p>
+  </footer>
+  
+  <script src="js/teste-automatico.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/script.js" type="module"></script>
   <script src="js/menu.js" type="module"></script>
-  </body>
+</body>
+
 </html>
