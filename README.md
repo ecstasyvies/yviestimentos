@@ -3,7 +3,6 @@
 > Transforme projeções financeiras em decisões fundamentadas
 
 [![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Versão](https://img.shields.io/badge/Versão-1.0.0-blue.svg)](https://github.com/ecstasyvies/yviestimentos/releases)
 [![Manutenção](https://img.shields.io/badge/Manutenção-Ativa-success.svg)]()
 [![Cobertura de Testes](https://img.shields.io/badge/Cobertura-100%25-brightgreen.svg)]()
 
@@ -38,6 +37,36 @@ O Yviestimentos é uma ferramenta web especializada em análise de investimentos
 - Navegação intuitiva e feedback visual instantâneo
 - Suporte completo a acessibilidade (WCAG 2.1)
 - Validação em tempo real dos dados inseridos
+
+### Acessibilidade Avançada
+- **Semântica HTML5**
+  - Estrutura hierárquica clara com elementos semânticos (`header`, `main`, `nav`, `section`, `aside`)
+  - Hierarquia de cabeçalhos lógica e bem estruturada
+  - Landmarks para navegação facilitada
+
+- **Suporte a Leitores de Tela**
+  - Atributos ARIA para estados e propriedades dinâmicas
+  - Regiões live para atualizações automáticas (`aria-live`)
+  - Descrições alternativas para conteúdo visual (`aria-label`)
+  - Textos exclusivos para leitores de tela (classe `.sr-only`)
+
+- **Formulários Acessíveis**
+  - Labels explicitamente associados a campos de entrada
+  - Indicação clara de campos obrigatórios
+  - Mensagens de erro contextual
+  - Suporte a diferentes métodos de entrada (`inputmode`)
+
+- **Navegação por Teclado**
+  - Foco visível e consistente
+  - Skip links para conteúdo principal
+  - Ordem de tabulação lógica
+  - Menus e submenus navegáveis por teclado
+
+- **Tabelas Responsivas**
+  - Cabeçalhos semanticamente corretos
+  - Sumários e legendas descritivas
+  - Adaptação para visualização móvel com data-labels
+  - Relações célula-cabeçalho preservadas
 
 ## Stack Tecnológica
 
