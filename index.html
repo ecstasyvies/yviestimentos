@@ -23,7 +23,7 @@
       <nav class="menu-desktop">
         <ul>
           <li>
-            <a href="https://colorid.es/@yvies" target="_blank" rel="me">Quem fez?</a>
+            <a href="https://colorid.es/@yvies" target="_blank" rel="me noopener">Quem fez?</a>
           </li>
           <li class="submenu-container">
             <button class="submenu-trigger" aria-expanded="false">
@@ -32,8 +32,8 @@
             </button>
             <ul class="submenu">
               <li><a href="mailto:yviesflowers@proton.me">E-mail</a></li>
-              <li><a href="https://wa.me/5589999974293" target="_blank">WhatsApp</a></li>
-              <li><a href="https://t.me/dericksousa" target="_blank">Telegram</a></li>
+              <li><a href="https://wa.me/5589999974293" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://t.me/dericksousa" target="_blank" rel="noopener">Telegram</a></li>
             </ul>
           </li>
         </ul>
@@ -49,7 +49,7 @@
     <nav>
       <ul>
         <li>
-          <a href="https://colorid.es/@yvies" target="_blank" rel="me">Quem fez?</a>
+          <a href="https://colorid.es/@yvies" target="_blank" rel="me noopener">Quem fez?</a>
         </li>
         <li class="submenu-container">
           <button class="submenu-trigger" aria-expanded="false">
@@ -58,8 +58,8 @@
           </button>
           <ul class="submenu">
             <li><a href="mailto:yviesflowers@proton.me">E-mail</a></li>
-            <li><a href="https://wa.me/5589999974293" target="_blank">WhatsApp</a></li>
-            <li><a href="https://t.me/dericksousa" target="_blank">Telegram</a></li>
+            <li><a href="https://wa.me/5589999974293" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://t.me/dericksousa" target="_blank" rel="noopener">Telegram</a></li>
           </ul>
         </li>
       </ul>
@@ -115,10 +115,15 @@
         <canvas id="grafico-investimento" aria-label="Gráfico de evolução do investimento" role="img"></canvas>
       </div>
       <div class="tabela-container">
+        <div class="tabela-header">
+          <h3 class="tabela-titulo">Evolução do Investimento</h3>
+          <button id="botao-exportar-csv" class="botao-exportar" aria-label="Exportar dados da tabela para CSV">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            Exportar CSV
+          </button>
+        </div>
         <table id="tabela-investimento">
-          <caption class="tabela-titulo">
-            Evolução do Investimento
-          </caption>
+          <caption class="sr-only">Evolução do Investimento</caption>
           <thead>
             <tr>
               <th scope="col">Mês/Período</th>
@@ -240,6 +245,8 @@
       <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer" aria-label="Licença MIT">MIT License</a>.
     </p>
   </footer>
+
+  <script src="js/teste-automatico.js" type="module"></script>
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/script.js" type="module"></script>
