@@ -2,10 +2,6 @@
 
 > Transforme projeções financeiras em decisões fundamentadas
 
-[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Manutenção](https://img.shields.io/badge/Manutenção-Ativa-success.svg)]()
-[![Cobertura de Testes](https://img.shields.io/badge/Cobertura-100%25-brightgreen.svg)]()
-
 ## Sobre o Projeto
 
 O Yviestimentos é uma ferramenta web especializada em análise de investimentos que capacita investidores a visualizarem o potencial de crescimento de seu patrimônio através de simulações precisas de juros compostos. Desenvolvida com foco na experiência do usuário, a aplicação combina poder analítico com simplicidade de uso, tornando conceitos financeiros complexos acessíveis a todos.
